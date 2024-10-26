@@ -42,6 +42,10 @@ The AI Manager is designed to orchestrate multiple AI agents to manage various a
    - Conduct component and integration testing.
    - Iterate based on feedback.
 
+## Security and Compliance
+
+The system will utilize Git for version control and management of all development activities. Basic safety nets will be implemented when creating tools for AI use to ensure secure operations. Further security measures and compliance requirements will be addressed as the project evolves.
+
 ## Communication Protocols
 
 The system will establish two primary communication protocols: one between the user and the AI Manager, and another for the AI Manager to issue orders to other AI agents. Further details and specific technologies for these protocols will be determined as the project progresses.
