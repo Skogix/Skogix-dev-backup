@@ -70,6 +70,25 @@ The system will prioritize modularity, utilizing small containers that can spin 
 
 The system will handle a large number of small tasks, with a focus on manageability rather than time sensitivity. The AI Manager will employ a ReAct-iteration approach, where small agents perform their tasks and provide input for subsequent iterations. This allows tasks to be left running overnight, ensuring that the system can efficiently manage and complete tasks without immediate time constraints.
 
+## Self-Critique in AI Systems
+
+Self-critique is a powerful technique that can significantly enhance the performance and reliability of AI systems. By allowing AI models to evaluate and refine their outputs, self-critique improves logical reasoning, consistency, and transparency.
+
+### How Self-Critique Works
+
+- The AI model generates multiple ideas in response to a prompt.
+- It reviews these ideas to identify potential flaws in reasoning.
+- The model attempts to resolve these flaws and improve the response.
+- This process mimics human iterative thinking, leading to more robust outputs.
+
+### Benefits of Self-Critique
+
+1. **Enhances Logical Reasoning**: Allows AI models to critique assumptions and consider constraints, reducing illogical conclusions.
+2. **Improves Consistency**: With explicit self-reflection, models avoid contradictions across multiple responses.
+3. **Acknowledges Limits of Knowledge**: AI models can indicate uncertainty rather than providing dubious answers, improving transparency.
+
+By incorporating self-critique, AI systems can become smarter, more consistent, and more transparent, ultimately leading to more trustworthy and effective AI solutions.
+
 ## AI Orchestration: Benefits, Best Practices, and Tools
 
 ### Benefits of AI Orchestration
