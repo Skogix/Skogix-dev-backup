@@ -54,7 +54,13 @@ The system will utilize Git for version control and management of all developmen
 
 ## Communication Protocols
 
-The system will establish two primary communication protocols: one between the user and the AI Manager, and another for the AI Manager to issue orders to other AI agents. Further details and specific technologies for these protocols will be determined as the project progresses.
+The system will establish two primary communication protocols:
+
+1. **AI-to-AI Communication:** Utilize YAML as the standard protocol for defining rules, configurations, and data exchange between AI agents. This ensures a structured and machine-readable format that facilitates seamless integration and coordination among agents.
+
+2. **AI-to-Human Communication:** Use Markdown for documentation, logs, and reports intended for human users. This format is user-friendly and widely supported, making it ideal for conveying information to users and developers.
+
+Further details and specific technologies for these protocols will be determined as the project progresses.
 
 ## Architecture and Design
 
@@ -119,10 +125,10 @@ To address the project's goals effectively, consider the following strategies:
    - Encourage a modular design approach for agents.
 
 4. **Types of Agents Needed:**
-   - Task Management Agent
-   - Bookmark Management Agent
-   - Dotfile Management Agent
-   - Documentation Agent
+   - **Task Management Agent:** Manages todo-lists and task prioritization.
+   - **Bookmark Management Agent:** Handles bookmarks and related metadata.
+   - **Dotfile Management Agent:** Oversees configuration files and version control.
+   - **Documentation Agent:** Generates and updates project documentation.
 
 5. **Tools Required for Agents:**
    - Integrate with task management software or use text-based todo lists.
