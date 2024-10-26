@@ -42,6 +42,10 @@ The AI Manager is designed to orchestrate multiple AI agents to manage various a
    - Conduct component and integration testing.
    - Iterate based on feedback.
 
+## Communication Protocols
+
+The system will establish two primary communication protocols: one between the user and the AI Manager, and another for the AI Manager to issue orders to other AI agents. Further details and specific technologies for these protocols will be determined as the project progresses.
+
 ## Architecture and Design
 
 The system will prioritize modularity, utilizing small containers that can spin up when needed and remain dormant otherwise. The preference is to use bash scripts for regular tools, with Python scripts for more complex tool execution. The design will focus on reproducibility, potentially using tools like Ansible, and adhere to the principle of "do one thing and do it well." Comprehensive documentation will be a key focus to ensure clarity and ease of use.
