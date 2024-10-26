@@ -1,8 +1,10 @@
 # AI Manager for Arch Linux Workstation
 
+Welcome to the AI Manager project, a centralized system designed to efficiently orchestrate specialized AI agents to manage various tasks on an Arch Linux workstation.
+
 ## Project Vision
 
-The overall flow of the AI Manager project is to establish a centralized system that efficiently orchestrates specialized AI agents to manage various tasks on an Arch Linux workstation. The goal is to create a scalable, secure, and user-friendly platform that seamlessly integrates multiple functional areas like task management, bookmarks, and dotfiles. By focusing on modular architecture, standardized communication protocols, and robust security measures, the project aims to provide a cohesive and reliable user experience. The iterative approach, with continuous testing and user feedback, ensures that the system evolves to meet user needs while maintaining high performance and security standards.
+The AI Manager project aims to create a scalable, secure, and user-friendly platform that seamlessly integrates multiple functional areas like task management, bookmarks, and dotfiles. By focusing on modular architecture, standardized communication protocols, and robust security measures, the project provides a cohesive and reliable user experience. An iterative approach, with continuous testing and user feedback, ensures that the system evolves to meet user needs while maintaining high performance and security standards.
 
 ## Overview
 
@@ -102,4 +104,11 @@ Your input on these questions will help tailor the development process to better
 
 ## Getting Started
 
-Instructions on setting up the AI Manager will be provided as development progresses.
+To set up the AI Manager, follow these steps:
+
+1. Clone the repository.
+2. Install the necessary dependencies.
+3. Configure the AI agents according to your needs.
+4. Run the AI Manager to start managing tasks on your Arch Linux workstation.
+
+Detailed instructions will be provided as development progresses.
