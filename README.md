@@ -42,6 +42,10 @@ The AI Manager is designed to orchestrate multiple AI agents to manage various a
    - Conduct component and integration testing.
    - Iterate based on feedback.
 
+## Scalability and Performance
+
+The system is expected to handle 10-20 different general tasks, with each task managed by small, modular agents. The core functionality will focus on interpreting user requests, determining the appropriate agent, and managing the necessary tools. The goal is to maintain a modular architecture that allows for easy addition of new agents as needed.
+
 ## Project Questions
 
 To proceed effectively, here are some questions that would help clarify the project's direction and requirements:
