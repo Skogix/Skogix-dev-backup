@@ -42,6 +42,10 @@ The AI Manager is designed to orchestrate multiple AI agents to manage various a
    - Conduct component and integration testing.
    - Iterate based on feedback.
 
+## User Interface
+
+The system will be entirely CLI-driven, with a strong focus on modularity. The design will enable users to "pipe" information between smaller commands, facilitating a flexible and efficient workflow. This approach ensures that users can easily integrate and automate tasks using the command line, leveraging the modular nature of the system.
+
 ## Security and Compliance
 
 The system will utilize Git for version control and management of all development activities. Basic safety nets will be implemented when creating tools for AI use to ensure secure operations. Further security measures and compliance requirements will be addressed as the project evolves.
