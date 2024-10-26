@@ -42,6 +42,10 @@ The AI Manager is designed to orchestrate multiple AI agents to manage various a
    - Conduct component and integration testing.
    - Iterate based on feedback.
 
+## Architecture and Design
+
+The system will prioritize modularity, utilizing small containers that can spin up when needed and remain dormant otherwise. The preference is to use bash scripts for regular tools, with Python scripts for more complex tool execution. The design will focus on reproducibility, potentially using tools like Ansible, and adhere to the principle of "do one thing and do it well." Comprehensive documentation will be a key focus to ensure clarity and ease of use.
+
 ## Task Management Strategy
 
 The system will handle a large number of small tasks, with a focus on manageability rather than time sensitivity. The AI Manager will employ a ReAct-iteration approach, where small agents perform their tasks and provide input for subsequent iterations. This allows tasks to be left running overnight, ensuring that the system can efficiently manage and complete tasks without immediate time constraints.
