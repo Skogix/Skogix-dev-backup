@@ -42,6 +42,40 @@ The AI Manager is designed to orchestrate multiple AI agents to manage various a
    - Conduct component and integration testing.
    - Iterate based on feedback.
 
+## Project Questions
+
+To proceed effectively, here are some questions that would help clarify the project's direction and requirements:
+
+1. **Scalability and Performance:**
+   - What is the expected scale of the system in terms of the number of agents and tasks it will handle?
+   - Are there specific performance benchmarks or constraints we should aim for?
+
+2. **Functional Areas:**
+   - Are there additional functional areas or specific tasks you foresee needing in the future?
+   - How should agents prioritize tasks when there are conflicting demands?
+
+3. **Architecture and Design:**
+   - What are the key architectural principles you want to prioritize (e.g., modularity, performance, ease of use)?
+   - Are there specific design patterns or technologies you prefer for the architecture?
+
+4. **Communication Protocols:**
+   - Are there specific communication standards or technologies you prefer (e.g., REST, gRPC)?
+   - How important is real-time communication versus batch processing for your use case?
+
+5. **Security and Compliance:**
+   - What are the most critical security concerns for your use case?
+   - Are there specific compliance requirements or industry standards we need to consider?
+
+6. **User Interface:**
+   - What are the key features you want in the UI?
+   - Are there specific design principles or frameworks you prefer for the UI?
+
+7. **Testing and Deployment:**
+   - What is your preferred testing framework or toolset?
+   - How frequently do you plan to release updates, and what is your deployment strategy?
+
+Your input on these questions will help tailor the development process to better meet your needs and expectations.
+
 ## Getting Started
 
 Instructions on setting up the AI Manager will be provided as development progresses.
