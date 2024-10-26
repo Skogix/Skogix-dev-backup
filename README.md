@@ -1,5 +1,9 @@
 # AI Manager for Arch Linux Workstation
 
+## Project Vision
+
+The overall flow of the AI Manager project is to establish a centralized system that efficiently orchestrates specialized AI agents to manage various tasks on an Arch Linux workstation. The goal is to create a scalable, secure, and user-friendly platform that seamlessly integrates multiple functional areas like task management, bookmarks, and dotfiles. By focusing on modular architecture, standardized communication protocols, and robust security measures, the project aims to provide a cohesive and reliable user experience. The iterative approach, with continuous testing and user feedback, ensures that the system evolves to meet user needs while maintaining high performance and security standards.
+
 ## Overview
 
 The AI Manager is designed to orchestrate multiple AI agents to manage various aspects of an Arch Linux workstation. It acts as a router between the user and specialized AI agents, handling tasks such as todo-lists, bookmarks, dotfiles, and documentation.
