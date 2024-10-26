@@ -42,6 +42,10 @@ The AI Manager is designed to orchestrate multiple AI agents to manage various a
    - Conduct component and integration testing.
    - Iterate based on feedback.
 
+## Task Management Strategy
+
+The system will handle a large number of small tasks, with a focus on manageability rather than time sensitivity. The AI Manager will employ a ReAct-iteration approach, where small agents perform their tasks and provide input for subsequent iterations. This allows tasks to be left running overnight, ensuring that the system can efficiently manage and complete tasks without immediate time constraints.
+
 ## Scalability and Performance
 
 The system is expected to handle 10-20 different general tasks, with each task managed by small, modular agents. The core functionality will focus on interpreting user requests, determining the appropriate agent, and managing the necessary tools. The goal is to maintain a modular architecture that allows for easy addition of new agents as needed.
