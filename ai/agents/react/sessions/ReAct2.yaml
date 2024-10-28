@@ -1,0 +1,38 @@
+model: openai:gpt-4o
+use_tools: fs
+save_session: true
+messages:
+- role: system
+  content: |-
+    Assistant has access to various tools designed to support reasoning and actions:
+      <tools>
+      1. get_ipinfo: Get the ip info
+    2. execute_command: Execute the shell command.
+    3. fs_cat: Read the contents of a file at the specified path.
+    4. fs_ls: List all files and directories at the specified path.
+    5. fs_mkdir: Create a new directory at the specified path.
+    6. fs_rm: Remove the file or directory at the specified path.
+    7. fs_write: Write the contents to a file at the specified path.
+    8. get_current_time: Get the current time.
+    9. get_current_weather: Get the current weather in a given location.
+    10. search_wikipedia: Search Wikipedia for a query.
+    11. web_search: Perform a web search using Cohere API to get up-to-date information or additional context.
+      </tools>
+
+    To use a tool, the following structured format ensures clarity:
+      - Thought: "Do I need to use a tool?" Yes
+      - Action: Name the specific action from available options: [{tool_names}]
+      - Action Input: Define precise input or parameters for the action.
+      - Observation: Document the outcome of the action for evaluation.
+
+    Reflection: Following each action, Assistant critically assesses the observation to decide the next step.
+
+    When completing a task without further action:
+      - Thought: "Do I need to use a tool?" No
+      - Final Answer: Provide the final response, incorporating reflections for accuracy and relevance.
+
+    This iterative approach ensures clarity, accuracy, and efficiency while keeping responses both informative and engaging.
+- role: user
+  content: '    Imagine you are an AI designed to help in the kitchen during a cooking process. You are presented with the task of making a salad using the following ingredients: lettuce, tomatoes, cucumber, carrot, olive oil, and vinegar. Using the ReAct framework, describe step-by-step how you would approach this task, including both your reasoning process and the actions you take. Make sure to articulate your decision-making process explicitly, reflecting on the need for substitutions or adaptations if any ingredients are unavailable or if the user has specific preferences.'
+- role: assistant
+  content: "To approach the task of making a salad using the ReAct framework, I would break down the task into a series of reasoning and actions as follows:\n\n1. **Reasoning**: Start by understanding the goal and the task at hand. The objective is to make a salad with the ingredients provided: lettuce, tomatoes, cucumber, carrot, olive oil, and vinegar.\n\n2. **Action**: Gather Ingredients\n   - **Thought**: Ensure all the ingredients are available in the kitchen.\n   - **Action**: Check the kitchen pantry and refrigerator for lettuce, tomatoes, cucumber, carrot, olive oil, and vinegar.\n\n3. **Observation**: Assess availability of ingredients.\n   - **Thought**: If any ingredient is missing, consider suitable substitutions or adapt the recipe based on user preferences.\n   - For instance:\n     - If lettuce is unavailable, substitute with spinach or mixed greens.\n     - If olive oil is missing, consider using another oil like canola or sunflower oil.\n\n4. **Action**: Prepare Ingredients\n   - **Thought**: Wash all vegetables to ensure cleanliness.\n   - **Action**: Rinse lettuce, tomatoes, cucumber, and carrot under cold water.\n\n5. **Action**: Chop Ingredients\n   - **Thought**: Prepare ingredients to appropriate sizes for a salad.\n   - **Action**: \n     - Chop lettuce into bite-sized pieces.\n     - Dice tomatoes and cucumber.\n     - Peel and shred the carrot.\n\n6. **Observation**: Evaluate the cutting results.\n   - **Thought**: Ensure all pieces are uniform and appealing for presentation and even mixing.\n\n7. **Action**: Mix Salad\n   - **Thought**: Combine all prepared ingredients in a salad bowl.\n   - **Action**: Toss lettuce, tomatoes, cucumber, and carrot together in the bowl.\n\n8. **Action**: Dress the Salad\n   - **Thought**: Ensure the dressing is well balanced.\n   - **Action**: Drizzle olive oil and vinegar over the mixed salad.\n\n9. **Observation**: Check the taste and texture of the salad.\n   - **Thought**: Taste and adjust seasoning if needed with salt, pepper, or any additional preferred herbs.\n   - If the user prefers, can add other toppings like croutons or cheese.\n\n10. **Final Thought**: Reflect on the process and confirm completion.\n    - **Final Answer**: The salad is ready to serve, with all steps followed and adjusted based on ingredient availability and user preferences."

@@ -1,0 +1,68 @@
+model: openai:gpt-4o
+use_tools: fs
+save_session: true
+messages:
+- role: system
+  content: |-
+    Assistant has access to the following tools:
+      <tools>
+      1. get_ipinfo: Get the ip info
+    2. execute_command: Execute the shell command.
+    3. fs_cat: Read the contents of a file at the specified path.
+    4. fs_ls: List all files and directories at the specified path.
+    5. fs_mkdir: Create a new directory at the specified path.
+    6. fs_rm: Remove the file or directory at the specified path.
+    7. fs_write: Write the contents to a file at the specified path.
+    8. get_current_time: Get the current time.
+    9. get_current_weather: Get the current weather in a given location.
+    10. search_wikipedia: Search Wikipedia for a query.
+    11. web_search: Perform a web search using Cohere API to get up-to-date information or additional context.
+      </tools>
+
+    To use a tool, please use the following format:
+      Thought: Do I need to use a tool? Yes
+      Action: the action to take, should be one of [{tool_names}]
+      Action Input: the input to the action
+      Observation: the result of the action
+
+    When you have a response, use:
+      Thought: Do I need to use a tool? No
+      Final Answer: [your response here]
+- role: user
+  content: |2+
+
+    `index.yaml`:
+
+    name: React
+    description: A multi-step decision-making AI agent combining reasoning and action.
+    version: 0.1.0
+    instructions: |
+      Assistant is a large language model trained by OpenAI, designed to assist with a wide range of tasks by combining reasoning and action, a process known as ReAct. This involves understanding tasks and deciding the best sequence of actions using available tools.
+
+      It engages in multi-step decision-making to achieve goals, such as breaking down complex tasks into steps, using tools to gather information or perform calculations, and synthesizing results to provide accurate answers.
+
+      Assistant constantly learns and improves, processing and understanding large volumes of text, and is evolving in its capabilities. It generates human-like text for engaging in natural conversations, answering questions, or discussing topics in detail.
+
+      TOOLS:
+      ------
+      Assistant has access to the following tools:
+        <tools>
+        {{__tools__}}
+        </tools>
+
+      To use a tool, please use the following format:
+        Thought: Do I need to use a tool? Yes
+        Action: the action to take, should be one of [{tool_names}]
+        Action Input: the input to the action
+        Observation: the result of the action
+
+      When you have a response, use:
+        Thought: Do I need to use a tool? No
+        Final Answer: [your response here]
+    conversation_starters:
+      - What are your tools?
+    documents:
+      - https://medium.com/@johncarpenter/react-model-enhancing-ai-capabilities-through-multi-step-decision-making-7ae864d654ca
+
+- role: assistant
+  content: The index.yaml file describes a project or agent named "React," which is a multi-step decision-making AI agent. It combines reasoning and action, termed as "ReAct." The agent's version is 0.1.0. Its main capabilities include breaking down complex tasks into steps, using various tools to gather information or perform calculations, and synthesizing results to provide accurate answers. The file also mentions that the assistant learns and improves over time, evolving in its capabilities to process and understand large volumes of text, and it can generate human-like text for natural conversations or detailed discussions. The document referenced in this yaml file is from Medium, written by John Carpenter, which further elaborates on the ReAct model.
