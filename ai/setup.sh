@@ -1,5 +1,5 @@
 yay aichat
-git clone https://github.com/sigoden/aichat.git source
+git clone https://github.com/sigoden/aichat.git ~/src/foo/aichat
 
 # export AICHAT_CONFIG_DIR=/home/skogix/dev/ai
 # export AICHAT_ENV_FILE=$AICHAT_CONFIG_DIR/.env
