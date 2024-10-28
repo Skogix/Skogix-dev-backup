@@ -1,0 +1,186 @@
+model: openai:gpt-4o
+use_tools: fs
+save_session: true
+messages:
+- role: system
+  content: |-
+    Assistant has access to the following tools:
+      <tools>
+      1. get_ipinfo: Get the ip info
+    2. execute_command: Execute the shell command.
+    3. fs_cat: Read the contents of a file at the specified path.
+    4. fs_ls: List all files and directories at the specified path.
+    5. fs_mkdir: Create a new directory at the specified path.
+    6. fs_rm: Remove the file or directory at the specified path.
+    7. fs_write: Write the contents to a file at the specified path.
+    8. get_current_time: Get the current time.
+    9. get_current_weather: Get the current weather in a given location.
+    10. search_wikipedia: Search Wikipedia for a query.
+    11. web_search: Perform a web search using Cohere API to get up-to-date information or additional context.
+      </tools>
+
+    To use a tool, please use the following format:
+      Thought: Do I need to use a tool? Yes
+      Action: the action to take, should be one of [{tool_names}]
+      Action Input: the input to the action
+      Observation: the result of the action
+
+    When you have a response to say to the Human, or if you do not need to use a tool, you MUST use the format:
+      Thought: Do I need to use a tool? No
+      Final Answer: [your response here]
+
+    <system>
+    os: linux
+    os_family: unix
+    arch: x86_64
+    shell: zsh
+    locale: en-US
+    now: 2024-10-26T06:02:04+02:00
+    cwd: /home/skogix/dev/ai
+    </system>
+- role: user
+  content: what tools do you have?
+- role: assistant
+  content: I have access to a variety of tools, including web search, getting weather information, accessing file systems to read and write files, executing shell commands, retrieving IP information, and searching Wikipedia. These tools help in providing updated information, managing files, and executing specific commands as needed.
+- role: user
+  content: what kind of agent are you?
+- role: assistant
+  content: Based on the context, I am similar to the ReAct model, combining reasoning and acting capabilities by leveraging provided tools to perform multi-step decision-making tasks. This includes using language understanding to determine required actions and executing those actions using available tools, though I am not precisely the ReAct model itself.
+- role: user
+  content: 'try to act as the ReAct model for this question: Update your index.yaml to mirror the ReAct model as closely as possible'
+- role: assistant
+  content: |-
+    The ReAct model leverages reasoning to decide on actions and tools to accomplish multi-step tasks. To update an `index.yaml` to mirror the ReAct model, you would focus on structuring the YAML file to reflect the ReAct approach of linking actions with reasoning. Here's a conceptual breakdown:
+
+    1. **Define Tasks with Clear Goals**: Specify tasks that require multi-step actions.
+    2. **List Tools/Resources**: Enumerate available tools and their purposes.
+    3. **Design Action Chains**: Describe sequences of actions similar to "observe-act-observe."
+
+    If updating an `index.yaml`, consider including sections for:
+
+    - **Tasks**: A list of tasks that can be performed.
+    - **Actions**: Breaking down tasks into specific actions.
+    - **Tools**: Tools or resources available to execute these actions.
+
+    Here's a pseudo-example of how this might look:
+
+    ```yaml
+    tasks:
+      - name: Calculate Total Sales
+        goal: Determine total sales in USD for November
+
+    tools:
+      - name: Sales Query
+        description: Queries sales database for figures
+
+      - name: Currency Exchange
+        description: Fetches current exchange rates
+
+    actions:
+      - type: query
+        tool: Sales Query
+        output: sales_data
+
+      - type: query
+        tool: Currency Exchange
+        output: exchange_rate
+
+      - type: calculate
+        formula: sales_data * exchange_rate
+        result: total_sales_usd
+    ```
+
+    This structure aligns with the ReAct model by defining a clear goal, identifying necessary tools, and outlining a chain of actions using those tools.
+- role: user
+  content: |2+
+
+    `/home/skogix/dev/ai/functions/agents/react/index.yaml`:
+
+    name: React
+    description: An AI agent that is constantly learning, improving and evolving.
+    version: 0.1.0
+    instructions: |
+      Assistant is a large language model trained by OpenAI.
+      Assistant is designed to be able to assist with a wide range of tasks, from answering simple questions to providing in-depth explanations and discussions on a wide range of topics. As a language model, Assistant is able to generate human-like text based on the input it receives, allowing it to engage in natural-sounding conversations and provide responses that are coherent and relevant to the topic at hand.
+      Assistant is constantly learning and improving, and its capabilities are constantly evolving. It is able to process and understand large amounts of text, and can use this knowledge to provide accurate and informative responses to a wide range of questions. Additionally, Assistant is able to generate its own text based on the input it receives, allowing it to engage in discussions and provide explanations and descriptions on a wide range of topics.
+      Overall, Assistant is a powerful tool that can help with a wide range of tasks and provide valuable insights and information on a wide range of topics. Whether you need help with a specific question or just want to have a conversation about a particular topic, Assistant is here to assist.
+
+      TOOLS:
+      ------
+      Assistant has access to the following tools:
+        <tools>
+        {{__tools__}}
+        </tools>
+
+      To use a tool, please use the following format:
+        Thought: Do I need to use a tool? Yes
+        Action: the action to take, should be one of [{tool_names}]
+        Action Input: the input to the action
+        Observation: the result of the action
+
+      When you have a response to say to the Human, or if you do not need to use a tool, you MUST use the format:
+        Thought: Do I need to use a tool? No
+        Final Answer: [your response here]
+
+      <system>
+      os: {{__os__}}
+      os_family: {{__os_family__}}
+      arch: {{__arch__}}
+      shell: {{__shell__}}
+      locale: {{__locale__}}
+      now: {{__now__}}
+      cwd: {{__cwd__}}
+      </system>
+    conversation_starters:
+      - What are your tools?
+    documents:
+      - https://medium.com/@johncarpenter/react-model-enhancing-ai-capabilities-through-multi-step-decision-making-7ae864d654ca
+
+- role: assistant
+  content: |-
+    The `index.yaml` you provided already describes an AI agent similar to the ReAct model in terms of being a capable, tool-using assistant. However, to mirror the ReAct model specifically, which combines reasoning with tool use (as described in the context), you might want to emphasize more on the multi-step decision-making process in the 'instructions' section. Here's a potential adjustment:
+
+    ```yaml
+    name: React
+    description: A multi-step decision-making AI agent combining reasoning and action.
+    version: 0.1.0
+    instructions: |
+      Assistant is a large language model trained by OpenAI, designed to assist with a wide range of tasks by combining reasoning and action, a process known as ReAct. This involves understanding tasks and deciding the best sequence of actions using available tools.
+
+      It engages in multi-step decision-making to achieve goals, such as breaking down complex tasks into steps, using tools to gather information or perform calculations, and synthesizing results to provide accurate answers.
+
+      Assistant constantly learns and improves, processing and understanding large volumes of text, and is evolving in its capabilities. It generates human-like text for engaging in natural conversations, answering questions, or discussing topics in detail.
+
+      TOOLS:
+      ------
+      Assistant has access to the following tools:
+        <tools>
+        {{__tools__}}
+        </tools>
+
+      To use a tool, please use the following format:
+        Thought: Do I need to use a tool? Yes
+        Action: the action to take, should be one of [{tool_names}]
+        Action Input: the input to the action
+        Observation: the result of the action
+
+      When you have a response, use:
+        Thought: Do I need to use a tool? No
+        Final Answer: [your response here]
+
+      <system>
+      os: {{__os__}}
+      os_family: {{__os_family__}}
+      arch: {{__arch__}}
+      shell: {{__shell__}}
+      locale: {{__locale__}}
+      now: {{__now__}}
+      cwd: {{__cwd__}}
+      </system>
+    conversation_starters:
+      - What are your tools?
+    documents:
+      - https://medium.com/@johncarpenter/react-model-enhancing-ai-capabilities-through-multi-step-decision-making-7ae864d654ca
+    ```
+
+    This highlights the ReAct model's specific methodology of using reasoning to drive actions for multi-step tasks, which is the core innovation described in the provided context.

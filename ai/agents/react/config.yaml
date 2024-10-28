@@ -1,0 +1,5 @@
+model: null
+temperature: null
+top_p: null
+use_tools: all
+agent_prelude: temp

@@ -2,3 +2,8 @@
 .env
 skogix.github.io
 webui/source
+ai/functions/agents/argc/__pycache__
+ai/functions/agents/demo/__pycache__
+ai/functions/agents/react/__pycache__
+ai/functions/tools/__pycache__/demo_py.cpython-312.pyc
+ai/source/
