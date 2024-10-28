@@ -1,9 +1,9 @@
 #!/bin/bash
 yay argc
-git clone https://github.com/sigoden/argc-completions.git source
-cd source
+git clone https://github.com/sigoden/argc-completions.git ~/src/foo/argc-completions
+cd ~/src/foo/argc-completions
 ./scripts/download-tools.sh
-./scripts/setup-shell.sh zsh  # bash/zsh/powershell/fish/nushell/elvish/xonsh/tcsh
+./scripts/setup-shell.sh zsh # bash/zsh/powershell/fish/nushell/elvish/xonsh/tcsh
 argc generate:all
 
 # ./skogix/skogix
