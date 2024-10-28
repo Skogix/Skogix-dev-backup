@@ -11,7 +11,7 @@ if [ "$(sudo docker ps -aq -f name=$CONTAINER_NAME)" ]; then
         sudo docker start $CONTAINER_NAME
     fi
     # Connect to the existing container
-    sudo docker exec -it $CONTAINER_NAME /bin/bash
+    sudo docker exec -it $CONTAINER_NAME /bin/bash --openai-api-key $OPENAI_API_KEY
 else
     # Run a new container if it does not exist
     sudo docker run -it --name $CONTAINER_NAME --volume /home/skogix/dev:/app paulgauthier/aider-full --openai-api-key $OPENAI_API_KEY
