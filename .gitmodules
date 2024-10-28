@@ -1,3 +1,6 @@
 [submodule "argc/source"]
 	path = argc/source
 	url = https://github.com/sigoden/argc
+[submodule "ai/source"]
+	path = ai/source
+	url = https://github.com/sigoden/aichat
