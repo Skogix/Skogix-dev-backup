@@ -1,9 +1,48 @@
-#### this is the token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWJqZWN0IjoiNGI0NWY5YmMtZjYwNC00YTE2LWIyNGEtMmQyNjc2MmE1NWQ2IiwiU3RlYW1JZCI6IjExNjU1MDc0MiIsIm5iZiI6MTczMDE0MzA1MCwiZXhwIjoxNzYxNjc5MDUwLCJpYXQiOjE3MzAxNDMwNTAsImlzcyI6Imh0dHBzOi8vYXBpLnN0cmF0ei5jb20ifQ.dor4ISM3Kt13DJoxTFtAQ6RO9wZrk8bFmgMhdKLvqDE create a simple curl script that uses it  
+#### Token for STRATZ API
 
-To create a simple `curl` script that uses your token to access the Stratz API, we can create a new shell script file. Here's how you can do it:
+This is the token: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWJqZWN0IjoiNGI0NWY5YmMtZjYwNC00YTE2LWIyNGEtMmQyNjc2MmE1NWQ2IiwiU3RlYW1JZCI6IjExNjU1MDc0MiIsIm5iZiI6MTczMDE0MzA1MCwiZXhwIjoxNzYxNjc5MDUwLCJpYXQiOjE3MzAxNDMwNTAsImlzcyI6Imh0dHBzOi8vYXBpLnN0cmF0ei5jb20ifQ.dor4ISM3Kt13DJoxTFtAQ6RO9wZrk8bFmgMhdKLvqDE`
 
-stratz_api_request.sh
+### Creating a Simple `curl` Script
+
+To create a simple `curl` script that uses your token to access the STRATZ API, follow these steps:
+
+Create a file named `stratz_api_request.sh` with the following content:
+
 ```bash
+#!/bin/bash
+
+# Define the API endpoint
+API_URL="https://api.stratz.com/graphql"
+
+# Define the authorization token
+TOKEN="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWJqZWN0IjoiNGI0NWY5YmMtZjYwNC00YTE2LWIyNGEtMmQyNjc2MmE1NWQ2IiwiU3RlYW1JZCI6IjExNjU1MDc0MiIsIm5iZiI6MTczMDE0MzA1MCwiZXhwIjoxNzYxNjc5MDUwLCJpYXQiOjE3MzAxNDMwNTAsImlzcyI6Imh0dHBzOi8vYXBpLnN0cmF0ei5jb20ifQ.dor4ISM3Kt13DJoxTFtAQ6RO9wZrk8bFmgMhdKLvqDE"
+
+# Make the API request
+curl -X POST "$API_URL" \
+     -H "Authorization: Bearer $TOKEN" \
+     -H "Content-Type: application/json" \
+     -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3" \
+     -d '{"query": "{ yourGraphQLQueryHere }"}'
+```
+
+Replace `yourGraphQLQueryHere` with the actual GraphQL query you want to execute. You can explore the available queries using the [GraphQL API Explorer](https://api.stratz.com/graphiql).
+
+### Running the Script
+
+To make the script executable and run it, use the following shell commands:
+
+```bash
+chmod +x stratz_api_request.sh
+./stratz_api_request.sh
+```
+
+### Troubleshooting
+
+If you encounter issues with Cloudflare blocking the request, consider the following:
+
+1. **Use a Proxy**: Sometimes using a proxy can help bypass Cloudflare's restrictions.
+2. **Use a Headless Browser**: Tools like Selenium or Puppeteer can simulate a real browser, which might help bypass the block.
+3. **Check API Documentation**: Ensure that you are using the correct endpoint and that there are no additional requirements for accessing the API.
 <<<<<<< SEARCH
 =======
 #!/bin/bash
