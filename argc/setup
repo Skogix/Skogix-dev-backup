@@ -1,0 +1,20 @@
+#!/bin/bash
+yay argc
+git clone https://github.com/sigoden/argc-completions.git source
+cd source
+./scripts/download-tools.sh
+./scripts/setup-shell.sh zsh  # bash/zsh/powershell/fish/nushell/elvish/xonsh/tcsh
+argc generate:all
+
+# ./skogix/skogix
+# # @flag -F --foo  Flag param
+# # @option --bar   Option param
+# # @option --baz*  Option param (multi-occurs)
+# # @arg val*       Positional param
+#
+# eval "$(argc --argc-eval "$0" "$@")"
+#
+# echo foo: $argc_foo
+# echo bar: $argc_bar
+# echo baz: ${argc_baz[@]}
+# echo val: ${argc_val[@]}
