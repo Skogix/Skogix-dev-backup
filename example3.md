@@ -1,12 +1,26 @@
-#### Token for STRATZ API
+### Conversation with Assistant
 
-This is the token: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWJqZWN0IjoiNGI0NWY5YmMtZjYwNC00YTE2LWIyNGEtMmQyNjc2MmE1NWQ2IiwiU3RlYW1JZCI6IjExNjU1MDc0MiIsIm5iZiI6MTczMDE0MzA1MCwiZXhwIjoxNzYxNjc5MDUwLCJpYXQiOjE3MzAxNDMwNTAsImlzcyI6Imh0dHBzOi8vYXBpLnN0cmF0ei5jb20ifQ.dor4ISM3Kt13DJoxTFtAQ6RO9wZrk8bFmgMhdKLvqDE`
+**User:** Clean up this file and also add this part and your answer to the file.
 
-### Creating a Simple `curl` Script
+**Assistant:** Please add the file you want to clean up to the chat, and I'll help you with the changes.
 
-To create a simple `curl` script that uses your token to access the STRATZ API, follow these steps:
+**User:** example3.md is the one you should clean up.
 
-Create a file named `stratz_api_request.sh` with the following content:
+**Assistant:** Let's clean up the `example3.md` file and add the relevant information about interacting with the STRATZ API. Here's the updated content:
+
+**User:** I committed the changes with git hash a62a60b & commit msg: chore: Clean up example3.md and add curl script for STRATZ API.
+
+**Assistant:** Ok.
+
+**User:** I added these files to the chat: stratz_api_request.sh. Let me know if there are others we should add.
+
+**Assistant:** To clean up the `stratz_api_request.sh` script and ensure it is correctly set up to interact with the STRATZ API, we can make the following improvements:
+
+1. Ensure the API URL is correct.
+2. Use a more appropriate User-Agent string.
+3. Provide a placeholder for the GraphQL query.
+
+Here's the updated script:
 
 ```bash
 #!/bin/bash
@@ -27,22 +41,11 @@ curl -X POST "$API_URL" \
 
 Replace `yourGraphQLQueryHere` with the actual GraphQL query you want to execute. You can explore the available queries using the [GraphQL API Explorer](https://api.stratz.com/graphiql).
 
-### Running the Script
-
-To make the script executable and run it, use the following shell commands:
+To run the updated script, use the following command:
 
 ```bash
-chmod +x stratz_api_request.sh
-./stratz_api_request.sh
+bash stratz_api_request.sh
 ```
-
-### Troubleshooting
-
-If you encounter issues with Cloudflare blocking the request, consider the following:
-
-1. **Use a Proxy**: Sometimes using a proxy can help bypass Cloudflare's restrictions.
-2. **Use a Headless Browser**: Tools like Selenium or Puppeteer can simulate a real browser, which might help bypass the block.
-3. **Check API Documentation**: Ensure that you are using the correct endpoint and that there are no additional requirements for accessing the API.
 <<<<<<< SEARCH
 =======
 #!/bin/bash
