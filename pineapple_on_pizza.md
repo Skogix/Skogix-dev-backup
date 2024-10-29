@@ -1,5 +1,18 @@
-User Description:  Make me three different AI agents, all with different personalities and make them fight over if pineapple belongs on pizza. 
-Error in generate_queries: Failed to generate 10 valid queries after 3 attempts. Errors: Attempt 1: JSON decoding failed with error: Expecting value: line 1 column 1 (char 0). Response received: ```json
+# Pineapple on Pizza Debate
+
+## User Description
+
+Create three different AI agents, each with a unique personality, and have them debate whether pineapple belongs on pizza.
+
+## Error in Generating Queries
+
+Failed to generate 10 valid queries after 3 attempts. Below are the errors encountered:
+
+### Attempt 1
+
+JSON decoding failed with error: Expecting value: line 1 column 1 (char 0). Response received:
+
+```json
 [
   "Can you create three AI personalities using OpenAI's GPT-3 that could have a structured debate on whether pineapple belongs on pizza?",
   "How do I simulate a debate between AI agents with differing opinions using Python? Can you provide a sample script?",
@@ -12,20 +25,33 @@ Error in generate_queries: Failed to generate 10 valid queries after 3 attempts.
   "Could you provide examples of how to use IBM Watson to create AI agents that can debate on topics like culinary choices in an interactive format?",
   "I need to implement a web platform where visitors can watch and vote on AI debates over different topics. What technologies and APIs should I use to create this?"
 ]
-``` | Attempt 2: JSON decoding failed with error: Expecting value: line 1 column 1 (char 0). Response received: ```json
+```
+
+### Attempt 2
+
+JSON decoding failed with error: Expecting value: line 1 column 1 (char 0). Response received:
+
+```json
 [
-    "How can I create three AI agents with distinct personalities using OpenAI's GPT-4?",
-    "What is the best Python library to simulate a debate between AI agents?",
-    "Can you provide a script for initializing three AI agents to debate about pineapple on pizza using the Microsoft Bot Framework?",
-    "Is there a way to use AWS Sagemaker to train AI models for debating popular topics such as food choices?",
-    "How can I use Google Cloud's AI Platform to measure sentiment analysis during a debate among AI agents?",
-    "What sort of metrics should I track to determine the winner of an AI debate on the topic of pineapple on pizza?",
-    "Could you generate example dialogues where AI agents with different personalities debate controversial food topics?",
-    "What APIs are available for integrating different language models into a single application for hosting a debate?",
-    "Can Discord bots be programmed to represent different personalities and host live debates on server channels?",
-    "Which platform provides real-time interaction APIs for viewers to vote on AI debate outcomes?"
+  "How can I create three AI agents with distinct personalities using OpenAI's GPT-4?",
+  "What is the best Python library to simulate a debate between AI agents?",
+  "Can you provide a script for initializing three AI agents to debate about pineapple on pizza using the Microsoft Bot Framework?",
+  "Is there a way to use AWS Sagemaker to train AI models for debating popular topics such as food choices?",
+  "How can I use Google Cloud's AI Platform to measure sentiment analysis during a debate among AI agents?",
+  "What sort of metrics should I track to determine the winner of an AI debate on the topic of pineapple on pizza?",
+  "Could you generate example dialogues where AI agents with different personalities debate controversial food topics?",
+  "What APIs are available for integrating different language models into a single application for hosting a debate?",
+  "Can Discord bots be programmed to represent different personalities and host live debates on server channels?",
+  "Which platform provides real-time interaction APIs for viewers to vote on AI debate outcomes?"
 ]
-``` | Attempt 3: Invalid JSON structure or incorrect number of queries. Expected 10 string queries, but received: [
+```
+
+### Attempt 3
+
+Invalid JSON structure or incorrect number of queries. Expected 10 string queries, but received:
+
+```json
+[
   "How can I create three distinct AI personalities using OpenAI's GPT-4 for a debate?",
   "What are the best strategies to simulate a conversation between multiple AI agents in Python?",
   "Can you recommend any open-source tools for creating AI agents with customized personalities?",
@@ -36,3 +62,5 @@ Error in generate_queries: Failed to generate 10 valid queries after 3 attempts.
   "Can you provide a sample code to integrate multiple AI agents into a single chat interface using Node.js?",
   "What frameworks exist for conducting AI debates in real time? Are there any that support audience interaction?",
   "How can I use machine learning to teach AI agents about human food preferences, including controversial topics like pineapple on pizza?"
+]
+```
