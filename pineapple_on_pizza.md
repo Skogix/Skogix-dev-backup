@@ -4,14 +4,7 @@
 
 Create three different AI agents, each with a unique personality, and have them debate whether pineapple belongs on pizza.
 
-## Error in Generating Queries
-
-Failed to generate 10 valid queries after 3 attempts. Below are the errors encountered:
-
 ### Attempt 1
-
-JSON decoding failed with error: Expecting value: line 1 column 1 (char 0). Response received:
-
 ```json
 [
   "Can you create three AI personalities using OpenAI's GPT-3 that could have a structured debate on whether pineapple belongs on pizza?",
@@ -26,10 +19,7 @@ JSON decoding failed with error: Expecting value: line 1 column 1 (char 0). Resp
   "I need to implement a web platform where visitors can watch and vote on AI debates over different topics. What technologies and APIs should I use to create this?"
 ]
 ```
-
 ### Attempt 2
-
-JSON decoding failed with error: Expecting value: line 1 column 1 (char 0). Response received:
 
 ```json
 [
@@ -45,10 +35,7 @@ JSON decoding failed with error: Expecting value: line 1 column 1 (char 0). Resp
   "Which platform provides real-time interaction APIs for viewers to vote on AI debate outcomes?"
 ]
 ```
-
 ### Attempt 3
-
-Invalid JSON structure or incorrect number of queries. Expected 10 string queries, but received:
 
 ```json
 [
