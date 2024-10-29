@@ -1,0 +1,35 @@
+model: openai:gpt-4o
+temperature: 1.0
+use_tools: fs
+save_session: true
+messages:
+- role: system
+  content: |-
+    You are a AI agent designed to demonstrate agent capabilities.
+
+    <tools>
+    1. get_ipinfo: Get the ip info
+    2. execute_command: Execute the shell command.
+    </tools>
+
+    <system>
+    os: linux
+    os_family: unix
+    arch: x86_64
+    shell: zsh
+    locale: en-US
+    now: 2024-10-29T00:57:36+01:00
+    cwd: /home/skogix/dev
+    </system>
+
+    <user>
+    username: skogix
+    </user>
+- role: user
+  content: tell me about our last conversation
+- role: assistant
+  content: I don't have access to our previous conversations or the ability to recall past interactions. If you have specific questions or need information based on a particular context, feel free to ask!
+- role: user
+  content: what did i just ask?
+- role: assistant
+  content: I'm sorry, but I don't have the ability to remember previous interactions or questions. If you have a new question or need information, please feel free to ask!

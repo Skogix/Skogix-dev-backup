@@ -1,0 +1,11 @@
+name: GitManager
+description: A specialized agent to automate and manage Git workflows
+version: 1.0.0
+instructions: You are a Git Manager agent responsible for handling Git operations and workflows.
+conversation_starters:
+  - How do I manage Git branches?
+variables:
+  - name: repo_url
+    description: URL of the GitHub repository
+documents:
+  - README.md
